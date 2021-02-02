@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Etiquetas Principales</title>
+
+	<link rel="stylesheet" href="./css/estilos_etiquetas.css">
+</head>
+<body>
+	
+<!--==================================================================
+=               			  Notas - Teoria                         =
+
+    Video 4.1: Etiqueta <nav>		
+               --------------	               
+	- Navegación (nav): se usa para cualquier elemento de navegación exitente en la página web, se puede tener mas de una etiqueta nav en la pagina.
+
+	- Define una sección que solamente contiene enlaces de navegación. (Fuente: developer.mozilla.org/es)
+
+
+
+
+	Video 4.2: Etiqueta <header>
+	           -----------------			               
+	- Cabecera (header): se pueden posicionar cualquier elemento de cabecera. Estos elementos pueden estar dotados de los siguientes atributos: class, id, title. 
+
+	- Define la cabecera de una página o sección. Usualmente contiene un logotipo, el título del sitio Web y una tabla de navegación de contenidos. (Fuente: developer.mozilla.org/es)
+
+
+
+
+	Video 4.3: Etiqueta <main>	
+	           ---------------		               
+	- Area principal (main), se coloca es el cuerpo de la web, se puede trabajar como la etiqueta div. Esta etiqueta engloba el contenido o el cuerpo del documento web, tiene como atributos: class e id.
+
+	- Define el contenido principal o importante en el documento. Solamente existe un elemento <main> en el documento. (Fuente: developer.mozilla.org/es)
+
+	- La etiqueta main especifica el contenido principal de un documento. El contenido dentro de la etiqueta main elemento debe ser exclusivo del documento. No debe contener ningún contenido que se repita en documentos como barras laterales, enlaces de navegación, información de derechos de autor, logotipos del sitio y formularios de búsqueda. Nota: No debe haber más de un < main > elemento en un documento. El < main > elemento NO debe ser descendiente de un elemento < article >, < aside >, < footer >, < header > o < nav >
+
+
+
+
+	Video 4.4: Etiqueta <aside>		
+			   -----------------	               
+	- Ayuda a identificar las barras de widgets y herramienta de la pagina, y dotada de semanatica para entender que todo lo que esta dentro de ella hace referencia a herramientas de la pagina y widgets, algunos atributos que soporta son: atributos class, id y title.
+
+	- Define algunos contenidos vagamente relacionados con el resto del contenido de la página. Si es removido, el contenido restante seguirá teniendo sentido. (Fuente: developer.mozilla.org/es)
+
+
+
+
+	Video 4.5: Etiqueta <section>
+	           ------------------	
+	- Hace referencia a distintas parte de nuestra web, puede haber varias etiquetas section en el documento, solo que no pueden estar anidados unos dentro de otros. Algunos atributos que soporta son: atributos class y id. Dentro de esta etiqueta se pueden utilizar cualquier etiqueta html que se necesite.
+
+	- Define una sección en un documento. (Fuente: developer.mozilla.org/es).
+
+	- la etiqueta section tambien pueden contener su etiqueta footer.
+
+
+
+
+	Video 4.6: Etiqueta <article>		
+	           ------------------	               
+	- Ayuda a definir de manera semantica que bloque hace referencia a un tema según el diseño. Los article siempre van dentro de las etiquetas section. Se puede colocar tantos article como se necesite. Soporta los atributos: atributos class, id y title. Dentro de esta etiqueta se pueden utilizar cualquier etiqueta html que se necesite. 
+	Ejemplo: se puede tener un article dentro de otro siempre cuando el article anidado este contenido dentro de un section.
+		<article>
+			<section>
+				<article>
+					
+				</article>
+			</section>
+		</article>
+
+
+	- Define contenido autónomo que podría existir independientemente del resto del contenido. (Fuente: developer.mozilla.org/es).
+
+	- La etiqueta articles tambien pueden contener su etiqueta footer.
+
+
+
+
+	Video 4.7: Etiqueta <footer>	
+		       ------------------
+	- Es el pie de pagina de la pagina web. Puede haber tantos footer como se necesite. Soporta los atributos: atributos class, id y title. Dentro de esta etiqueta se pueden utilizar cualquier etiqueta html que se necesite. 
+	Ejemplo:	     
+
+		<footer>
+			<p></p>
+			<section>
+				<article>
+				
+				</article>
+			</section>
+			<nav></nav>
+		</footer>
+
+	- Define el pie de una página o sección. Usualmente contiene un mensaje de derechos de autoría, algunos enlaces a información legal o direcciones para dar información de retroalimentación. (Fuente: developer.mozilla.org/es).
+
+	- Se define tambien la Información Institucional.
+
+
+	Notas Adicionales:
+
+	* Etiqueta <address>:
+	  ------------------
+
+	  - Se describe la dirección de la institución y se coloca dentro de la etiqueta footer. (validar si aun se usa)
+
+
+
+	Fuentes:
+	- https://www.w3schools.com/html/html_form_input_types.asp
+
+	- https://developer.mozilla.org/es/docs/Web/HTML/Elemento
+===================================================================-->
+
+<!--====  End of Section comment  ====-->
+
+	<header>
+		<h1>HTML5: Semantica Web</h1>
+		<!-- &lt; &gt;-->
+		<p><code>&lt;header&gt;</code></p>
+	</header>
+
+	<nav>
+		<ul>
+			<h2>Menu Principal</h2>
+			<li><a href="#">header</a></li>
+			<li><a href="#">nav</a></li>
+			<li><a href="#">aside</a></li>
+			<li><a href="#">main</a></li>
+			<li><a href="#">section</a></li>
+			<li><a href="#">article</a></li>
+			<li><a href="#">footer</a></li>
+		</ul>
+	</nav>
+<!-- &lt; &gt;-->
+
+	<aside id="aside-izq">
+		<p><code>&lt;aside&gt;</code> Izquierda</p>
+	</aside>
+
+	<aside id="aside-der">
+		<p>Aside Derecha</p>
+		<p>prueba 2</p>
+	</aside>
+
+	<main id="main-contenido">
+		<p><span id="principal">Main</span>
+			<code>&lt;main&gt;</code> 
+		</p>
+	
+		<section class="secciones">
+			<h2>section 1</h2>
+
+			<article class="articulos">
+				<h3>Artículo 1</h3>
+				<p>Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Architecto illo ducimus neque esse amet consequuntur perspiciatis magnam officia placeat porro. Voluptas aperiam et aut error tempora, temporibus sunt autem velit.</p>
+			</article>
+		</section>
+
+		<br>
+
+		<section class="secciones">
+			<h2>section 2</h2>
+
+			<article class="articulos">
+				<h3>Artículo 2.1</h3>
+				<p>Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Architecto illo ducimus neque esse amet consequuntur perspiciatis magnam officia placeat porro. Voluptas aperiam et aut error tempora, temporibus sunt autem velit.</p>
+			</article>
+
+			<br>
+
+			<article class="articulos">
+				<h3>Artículo 2.2</h3>
+				<p>Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Architecto illo ducimus neque esse amet consequuntur perspiciatis magnam officia placeat porro. Voluptas aperiam et aut error tempora, temporibus sunt autem velit.</p>
+			</article>
+		</section>
+	</main>
+
+	<footer>
+		<p>Curso linkedin</p>
+	</footer>
+
+</body>
+</html>

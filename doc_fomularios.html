@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Formularios</title>
+</head>
+<body>
+
+	<!--=====================================
+	=             Notas - Teoría            =
+
+	Formularios: El boton de envio debe estar dentro de la etiqueta form pero fuera del fieldset de manera que englobe todo el formulario. Se puede encontrar variedad de estructura de  formularios. Cada elemento del formulario tiene sus propios atributos, sin embargo como atributos genericos estan el class e id.
+
+
+
+	Videos 5.1 / 5.2 / 5.3: Etiquetas:
+			----------
+
+	- <form> Representa un formulario, consistiendo de controles que puede ser enviado a un servidor para procesamiento. 
+
+	- <fieldset> Representa un conjunto de controles, o agrupamiento de datos.
+
+	- <legend>   Representa el título de un <fieldset>.
+
+	- <input> Representa un campo de datos escrito que permite al usuario editar los datos.
+
+	- <label> Representa el título de un control de formulario.
+
+	- <for> El ID del elemento de formulario etiquetable relacionado en el mismo documento que el elemento label. El primer elemento en el documento con tal ID que coincida con el dispuesto en el atributo for será el control etiquetado para este elemento.
+
+	- <select> Representa un control que permite la selección entre un conjunto de opciones.
+
+	- <optgroup> Representa un conjunto de opciones, agrupadas lógicamente.
+
+	- <option> Representa una opción en un elemento <select>, o una sugerencia de un elemento <datalist>.
+
+	- <textarea> Representa un control de edición de texto multilínea.
+
+	- <datalist> Representa un conjunto de opciones predefinidas para otros controles.
+
+
+	que es action en el form
+	======================================-->
+	
+	
+	
+	<!--====  End of Section comment  ====-->
+	
+	<form name="miformulario" id="miformulario" method="get">
+		<fieldset>
+			<!-- Forma No. 1 de input-->
+			<legend>Datos Personales</legend>
+
+			<br>
+			<label for="name">Nombre:&nbsp;</label>
+			<input type="text" name="name" id="name" placeholder="Primer Nombre" required>
+
+			<br><br>
+			<label for="lname">Apellido:&nbsp;</label>
+			<input type="text" name="lname" id="lname" placeholder="Primer Apellido" required>
+
+			<br><br>
+			<label for="age">Edad:&nbsp;</label>
+			<input type="number" name="age" min="1" max="100" placeholder="1 a 100 años">
+				
+			<br><br>
+			<label for="cedula">Cedula:&nbsp;</label>
+			<input type="number" name="cedula" placeholder="11.111.111">
+
+			<!-- Forma No. 2 de input-->
+			<br><br>
+			<label for="ciudad">Ciudad:&nbsp;</label>
+				<input list="nombre_ciudad"	name="ciudad" id="ciudad" placeholder="Seleccion la ciudad de nacimiento">
+				<datalist id="nombre_ciudad">
+					<option value="Maracaibo"></option>
+					<option value="Cabimas"></option>
+					<option value="San Francisco"></option>
+					<option value="Cañada"></option>
+				</datalist>
+
+			<br><br>
+			<div>
+				<label>
+					Ingrese su número telefonico:&nbsp;
+					<input type="tel" name="pnumber" placeholder="Ingese un número telefonico">
+				</label>
+			</div>
+
+			<br>
+			<label>E-mail:&nbsp;
+				<input type="email" name="email" id="email" placeholder="ejemplo@email.com">
+			</label>
+
+			<br><br>
+			<div>
+				<label for="passwd">Ingrese su Contraseña:&nbsp;
+					<input type="password" name="passwd" disabled>
+				</label>
+			</div>
+			<br>
+			
+		</fieldset>
+
+
+		<br><br>
+		<fieldset>
+			<legend>Datos de Registro de Materias y Horario</legend>
+
+			<!-- Datalist -->
+			<label>Aula de Clases:&nbsp;
+				<input name="aula" id="aula" list="naula">
+				<datalist id="naula">
+					<option value="A"></option>
+					<option value="B"></option>
+					<option value="C"></option>
+					<option value="D"></option>
+				</datalist>
+			</label>
+			<br><br>
+
+			<!-- Radiobuttons -->
+			<div>Seleccione el Turno:</div>
+			<label for="manana">Mañana</label>
+			<input type="radio" name="turno" id="manana" value="manana">
+
+			<label for="tarde">Tarde</label>
+			<input type="radio" name="turno" id="tarde" value="tarde">
+
+			<label for="noche">Noche</label>
+			<input type="radio" name="turno" id="noche" value="noche">
+			<br><br>
+
+			<!-- Checkbuttons -->
+			<div>Seleccione la Forma de Pago:</div>
+			<label for="efectivo">Efectivo</label>
+			<input type="checkbox" name="fpago" id="efectivo">
+
+			<label for="punto">Punto de venta</label>
+            <input type="checkbox" name="fpago" id="punto">
+
+			<label for="deposito">Deposito</label>
+            <input type="checkbox" name="fpago" id="deposito">
+
+            <label for="transferencia">Transferencia</label>
+            <input type="checkbox" name="fpago" id="transferencia">
+            <br><br>
+
+            <!-- Menu Desplegagle -->
+            <div>Seleccione las Materias:</div>
+            <label for="materias">Semenstre I</label>
+            <select name="materias" id="semestre1">
+            	<optgroup label="Semestre I">
+            		<option value="ai">A-I</option>
+            		<option value="bi">B-I</option>
+            		<option value="ci">C-I</option>
+            	</optgroup>
+            </select>   
+            <label for="materias">Semenstre II</label>
+            <select name="materias" id="semestre2">
+            	<optgroup label="Semestre II">
+            		<option value="aii">A-II</option>
+            		<option value="bii">B-II</option>
+            		<option value="cii">C-II</option>
+            	</optgroup>
+            </select>
+            <label for="materias">Semenstre III</label>
+            <select name="materias" id="semestre3">
+            	<optgroup label="Semestre III">
+            		<option value="aii">A-III</option>
+            		<option value="bii">B-III</option>
+            		<option value="cii">C-III</option>
+            	</optgroup>
+            </select>  
+            <br><br>
+
+            <!-- Comentarios -->
+            <label for="comentarios">Comentario:</label>
+            <textarea name="comentarios" id="comentarios" placeholder="ingrese un comentario referente al proceso de inscripcion">
+            </textarea>
+            <br />
+			
+		</fieldset>
+
+		<br><br>
+		<!-- Botones tipo input -->
+		<input type="submit" value="Enviar">
+
+		<input type="reset" value="Borrar">
+	</form>
+
+</body>
+</html>

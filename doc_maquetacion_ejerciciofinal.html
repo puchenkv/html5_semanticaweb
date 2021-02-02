@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Maquetación Web</title>
+</head>
+<body>
+<!--======================================================================
+=                            Notas - Teoria                              =
+
+- Es una buena practica utilizar clases de nombres en ingles
+
+- cuando se utiliza el nombre de clases compuestas es aconsejable el uso de guiones. Ejemplo
+	section-01
+
+- contenedor (wrapper)
+
+- contenido (main -> content)
+
+======================================-->
+
+<!--====  End of Section comment  ====-->
+
+
+	<div class="wrapper">
+		<header class="header-top">
+			<nav class="navbar">
+				<a href="#">ABOUT</a>
+				<a href="#">CREATION</a>
+				<a href="#">PORFOLIO</a>
+				<a href="#">CONTACT</a>
+			</nav>	
+				
+				<h1>Z. Menendez <span>PORTFOLIO</span></h1>
+		</header>
+
+		<main class="content">
+			<section id="section-01">
+				<figure class="photo">
+					<img src="./images/img-01.png" alt="">
+				</figure>
+				
+				<h1>About</h1>
+
+				<div>
+					<h2>01. about me</h2>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi voluptatem, excepturi nihil ipsam? Vel sequi, voluptas nam ipsum? Itaque excepturi ipsam tenetur enim reprehenderit ipsa deleniti expedita impedit vel laboriosam.</p>
+				</div>
+			</section>
+
+			<section id="section-02">	
+				<h1>CREATION</h1>
+
+				<figure class="light-bult">
+					<img src="./images/img-02.png" alt="">
+				</figure>
+
+				<div>
+					<h2>02. creation</h2>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati cumque libero dolores, delectus quasi molestiae quia ea quibusdam? Recusandae, doloremque, exercitationem. Voluptates tempore vitae quae cumque! Aut repellat tempora ullam?</p>
+				</div>
+			</section>
+
+			<section id="section-03">	
+				<h1>PORFOLIO</h1>
+
+				<div>
+					<h2>03. porfolio</h2>
+					<ul>
+						<li>texto</li>
+						<li>texto</li>
+						<li>texto</li>
+					</ul>
+				</div>
+			</section>
+
+			<section id="section-04">	
+				<h1>CONTACT</h1>
+
+				<div>
+					<h2>04. contact</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, repudiandae. A quibusdam quidem aliquid placeat quaerat corporis quia, ex dolorum repellendus qui est beatae in dolores odio, maxime nisi iure.</p>
+				</div>
+
+				<form id="form-bottom" method="get">
+					<fieldset>
+						<input type="email" name="email" id="email" placeholder="keep your email">
+					</fieldset>
+
+					<br>
+					<button type="submit">send me</button>
+				</form>
+			</section>
+		</main>
+	</div>
+</body>
+</html>
